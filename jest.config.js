@@ -1,10 +1,11 @@
 module.exports = {
-  setupFilesAfterEnv: ["jest-plugin-context/setup", "./jest.setup"],
+  setupFilesAfterEnv: ['jest-plugin-context/setup', './jest.setup'],
   verbose: true,
   moduleNameMapper: {
-    "^@components(.*)$": "<rootDir>/components$1",
-    "^@pages(.*)$": "<rootDir>/pages$1",
-    "^@hooks(.*)$": "<rootDir>/hooks$1",
+    '^@components(.*)$': '<rootDir>/components$1',
+    '^@pages(.*)$': '<rootDir>/pages$1',
+    '^@hooks(.*)$': '<rootDir>/hooks$1',
+    '^@data(.*)$': '<rootDir>/data$1',
   },
   coverageThreshold: {
     global: {
