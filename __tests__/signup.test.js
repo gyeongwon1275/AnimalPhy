@@ -5,13 +5,13 @@ import SignUp from '@pages/signup';
 
 describe('sign-up', () => {
   it('render id,password,name,email,phone form', () => {
-    const { getByLabelText } = render(<SignUp />);
+    const { getByPlaceholderText } = render(<SignUp />);
 
-    expect(getByLabelText('id')).toBeInTheDocument();
-    expect(getByLabelText('password')).toBeInTheDocument();
-    expect(getByLabelText('password-confirm')).toBeInTheDocument();
-    expect(getByLabelText('user-name')).toBeInTheDocument();
-    expect(getByLabelText('email')).toBeInTheDocument();
-    expect(getByLabelText('phone')).toBeInTheDocument();
+    expect(getByPlaceholderText('아이디')).toBeInTheDocument();
+    expect(getByPlaceholderText('비밀번호')).toBeInTheDocument();
+    expect(getByPlaceholderText('비밀번호 확인')).toBeInTheDocument();
+    expect(getByPlaceholderText('이름')).toBeInTheDocument();
+    expect(getByPlaceholderText('이메일')).toBeInTheDocument();
+    expect(getByPlaceholderText('연락처')).toBeInTheDocument();
   });
 });
