@@ -1,12 +1,17 @@
-import React from "react";
-import { render } from "@testing-library/react";
+import React from 'react';
+import { render } from '@testing-library/react';
 
-import SignUp from "@pages/signup";
+import SignUp from '@pages/signup';
 
-describe("sign-up", () => {
-  it("have to show text 회원가입", () => {
-    const { getByText } = render(<SignUp />);
+describe('sign-up', () => {
+  it('render id,password,name,email,phone form', () => {
+    const { getByLabelText } = render(<SignUp />);
 
-    expect(getByText("회원가입")).toBeInTheDocument();
+    expect(getByLabelText('id')).toBeInTheDocument();
+    expect(getByLabelText('password')).toBeInTheDocument();
+    expect(getByLabelText('password-confirm')).toBeInTheDocument();
+    expect(getByLabelText('user-name')).toBeInTheDocument();
+    expect(getByLabelText('email')).toBeInTheDocument();
+    expect(getByLabelText('phone')).toBeInTheDocument();
   });
 });
