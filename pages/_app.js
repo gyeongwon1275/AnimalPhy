@@ -1,13 +1,18 @@
 import Head from 'next/head';
+import { ThemeProvider } from 'styled-components';
 
 import { wrapper } from '@data/configureStore';
+import { GlobalStyle, darkTheme } from './globalStyle';
 
 const AnimalPhy = ({ Component, pageProps }) => (
   <>
-    <Head>
-      <title>AnimalPhy</title>
-    </Head>
-    <Component {...pageProps} />
+    <ThemeProvider theme={darkTheme}>
+      <Head>
+        <title>AnimalPhy</title>
+      </Head>
+      <Component {...pageProps} />
+      <GlobalStyle />
+    </ThemeProvider>
   </>
 );
 
