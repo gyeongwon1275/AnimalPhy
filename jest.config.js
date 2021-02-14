@@ -6,6 +6,7 @@ module.exports = {
     '^@pages(.*)$': '<rootDir>/pages$1',
     '^@hooks(.*)$': '<rootDir>/hooks$1',
     '^@data(.*)$': '<rootDir>/data$1',
+    '^@layouts(.*)$': '<rootDir>/layouts$1',
   },
   coverageThreshold: {
     global: {
