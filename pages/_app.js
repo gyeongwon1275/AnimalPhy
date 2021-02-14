@@ -2,11 +2,11 @@ import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 
 import { wrapper } from '@data/configureStore';
-import { GlobalStyle, darkTheme } from './globalStyle';
+import { GlobalStyle, lightTheme } from './globalStyle';
 
 const AnimalPhy = ({ Component, pageProps }) => (
   <>
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={lightTheme}>
       <Head>
         <title>AnimalPhy</title>
       </Head>
