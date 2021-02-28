@@ -72,7 +72,7 @@ export default function SignUp({ formik: { values, handleSubmit, handleChange } 
         </Button>
       </Form>
 
-      <div className="go-to-login-wrapper">
+      <div className="link-wrapper">
         <p>이미 회원이세요? </p>
         <a href="/login">로그인</a>
       </div>

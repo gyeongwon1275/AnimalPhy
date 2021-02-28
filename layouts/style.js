@@ -18,7 +18,7 @@ export const FormContainer = styled.div`
     margin: 8px;
     width: 100%;
   }
-.go-to-login-wrapper {
+.link-wrapper {
     margin: 8px;
     text-align: center;
     p {
@@ -30,3 +30,5 @@ export const FormContainer = styled.div`
     }
   }
 `;
+
+export const xxx = () => {};

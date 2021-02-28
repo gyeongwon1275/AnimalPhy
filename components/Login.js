@@ -33,7 +33,7 @@ export default function Login({ formik: { values, handleChange, handleSubmit } }
           로그인
         </Button>
       </Form>
-      <div className="go-to-signup-wrapper">
+      <div className="link-wrapper">
         <p>계정이 없나요? </p>
         <a href="/signup">회원가입</a>
       </div>
