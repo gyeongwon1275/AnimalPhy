@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 
 import { wrapper } from '@data/configureStore';
-import { GlobalStyle, lightTheme } from './globalStyle';
+import { GlobalStyle, lightTheme } from '@style/globalStyle';
 
 const AnimalPhy = ({ Component, pageProps }) => (
   <>
