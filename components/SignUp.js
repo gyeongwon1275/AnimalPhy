@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Input, Form } from 'antd';
 
-export default function SignUp({ formik }) {
+export default function SignUp({ formik:{values,handleSubmit,handleChange} }) {
+
   return (
     <>
-      <Form className="signup-form" onSubmit={formik.handleSubmit}>
+      <Form className="signup-form" onSubmit={handleSubmit}>
         <input type="submit" style={{ display: 'none' }} />
         <Input
           className="form-input-wrapper"
@@ -12,8 +13,8 @@ export default function SignUp({ formik }) {
           id="userId"
           name="userId"
           type="text"
-          onChange={formik.handleChange}
-          value={formik.values.userId}
+          onChange={handleChange}
+          value={values.userId}
           required
         />
         <Input.Password
@@ -22,8 +23,8 @@ export default function SignUp({ formik }) {
           id="password"
           name="password"
           type="password"
-          onChange={formik.handleChange}
-          value={formik.values.password}
+          onChange={handleChange}
+          value={values.password}
           required
         />
         <Input.Password
@@ -32,8 +33,8 @@ export default function SignUp({ formik }) {
           id="passwordConfirm"
           name="passwordConfirm"
           type="password"
-          onChange={formik.handleChange}
-          value={formik.values.passwordConfirm}
+          onChange={handleChange}
+          value={values.passwordConfirm}
           required
         />
         <Input
@@ -42,8 +43,8 @@ export default function SignUp({ formik }) {
           id="userName"
           name="userName"
           type="text"
-          onChange={formik.handleChange}
-          value={formik.values.userName}
+          onChange={handleChange}
+          value={values.userName}
         />
         <Input
           className="form-input-wrapper"
@@ -51,8 +52,8 @@ export default function SignUp({ formik }) {
           id="email"
           name="email"
           type="text"
-          onChange={formik.handleChange}
-          value={formik.values.email}
+          onChange={handleChange}
+          value={values.email}
         />
         <Input
           className="form-input-wrapper"
@@ -60,13 +61,13 @@ export default function SignUp({ formik }) {
           id="phone"
           name="phone"
           type="text"
-          onChange={formik.handleChange}
-          value={formik.values.phone}
+          onChange={handleChange}
+          value={values.phone}
         />
         <Button
           className="form-button-wrapper"
           type="submit"
-          onClick={formik.handleSubmit}
+          onClick={handleSubmit}
         >
           회원가입
         </Button>
