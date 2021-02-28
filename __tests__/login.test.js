@@ -30,7 +30,7 @@ describe('Login', () => {
     expect(getByRole('link', { name: '회원가입' })).toBeInTheDocument();
     expect(getByRole('link', { name: '회원가입' })).toHaveAttribute('href', '/signup');
   });
-  it('input id and password', () => {
+  it('inputs id and password', () => {
     const { getByPlaceholderText } = render(<LoginContainer />);
 
     fireEvent.change(getByPlaceholderText('아이디'), {
