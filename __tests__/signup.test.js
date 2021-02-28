@@ -1,11 +1,12 @@
 import React from 'react';
+
 import { fireEvent, render } from '@testing-library/react';
 
-import SignUp from '@pages/signup';
+import SignUpContainer from '@pages/signup';
 
-describe('sign-up', () => {
-  it('render id,password,name,email,phone form', () => {
-    const { getByPlaceholderText } = render(<SignUp />);
+describe('SignUp', () => {
+  it('renders id,password,name,email,phone form', () => {
+    const { getByPlaceholderText } = render(<SignUpContainer />);
 
     expect(getByPlaceholderText('아이디')).toBeInTheDocument();
     expect(getByPlaceholderText('비밀번호')).toBeInTheDocument();
@@ -15,8 +16,8 @@ describe('sign-up', () => {
     expect(getByPlaceholderText('연락처')).toBeInTheDocument();
   });
 
-  it('can input id,password,name,email,phone form', () => {
-    const { getByPlaceholderText } = render(<SignUp />);
+  it('input id,password,name,email,phone form', () => {
+    const { getByPlaceholderText } = render(<SignUpContainer />);
 
     fireEvent.change(getByPlaceholderText('아이디'), {
       target: { value: 'rud285' },
