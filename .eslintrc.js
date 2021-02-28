@@ -9,7 +9,7 @@ module.exports = {
       alias: {
         map: [
           ['@components', './components'],
-          ['@pages', './@pages'],
+          ['@pages', './pages'],
           ['@layouts', './layouts'],
           ['@data', './data'],
           ['@style', './style'],
@@ -17,6 +17,7 @@ module.exports = {
         ],
         extensions: ['.js', '.jsx', '.json'],
       },
+
     },
   },
   extends: [
@@ -38,9 +39,7 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: 'module',
   },
-  plugins: [
-    'react', 'prettier',
-  ],
+  plugins: ['react'],
   rules: {
     indent: ['error', 2],
     'no-trailing-spaces': 'error',
