@@ -7,6 +7,7 @@ module.exports = {
     '^@hooks(.*)$': '<rootDir>/hooks$1',
     '^@data(.*)$': '<rootDir>/data$1',
     '^@layouts(.*)$': '<rootDir>/layouts$1',
+    '^@style(.*)$': '<rootDir>/style$1',
   },
   coverageThreshold: {
     global: {

@@ -6,7 +6,9 @@
       "@pages/*": ["pages/*"],
       "@hooks/*": ["hooks/*"],
       "@data/*": ["data/*"],
-      "@layouts/*": ["layouts/*"]
-    }
+      "@layouts/*": ["layouts/*"],
+      "@style/*": ["style/*"]
+    },
+    "jsx": "react"
   }
 }
