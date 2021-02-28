@@ -1,17 +1,20 @@
-import Link from 'next/link';
+import { useFormik } from 'formik';
 
-function login() {
+import PublicLayout from '@layouts/PublicLayout';
+import Login from '@components/Login';
+
+export default function LoginContainer() {
+  const formik = useFormik({
+    initialValues: {
+      userId: '',
+      password: '',
+    },
+
+  });
+
   return (
-    <div>
-      로그인
-      <Link href="/signup">
-        <a>계정이 없나요?</a>
-      </Link>
-      <div>
-        <img src="/images/sample_dog.jpeg" alt="dog!" />
-      </div>
-    </div>
+    <PublicLayout>
+      <Login formik={formik} />
+    </PublicLayout>
   );
 }
-
-export default login;
