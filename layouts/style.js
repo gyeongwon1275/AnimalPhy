@@ -1,24 +1,24 @@
 import styled from 'styled-components';
 
 export const FormContainer = styled.div`
-  width: 300px;
-  height: auto;
-  margin: 0 auto;
+ width: 300px;
+ height: auto;
+ margin: 0 auto;
 
-  .logo {
+.logo {
     padding: 30px;
     text-align: center;
   }
 
-  .form-input-wrapper {
+.form-input-wrapper {
     padding: 8px;
     margin: 8px;
   }
-  .form-button-wrapper {
+.form-button-wrapper {
     margin: 8px;
     width: 100%;
   }
-  .go-to-login-wrapper {
+.go-to-login-wrapper {
     margin: 8px;
     text-align: center;
     p {
