@@ -34,6 +34,13 @@ describe('SignUp', () => {
     expect(getByPlaceholderText('연락처')).toBeInTheDocument();
   });
 
+  it('renders link', () => {
+    const { getByText, getByRole } = render(<SignUpContainer />);
+
+    expect(getByText('이미 회원이세요?')).toBeInTheDocument();
+    expect(getByRole('link', { name: '로그인' })).toBeInTheDocument();
+  });
+
   it('input id,password,name,email,phone form', () => {
     const { getByPlaceholderText } = render(<SignUpContainer />);
 
