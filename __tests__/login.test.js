@@ -23,6 +23,13 @@ describe('Login', () => {
     expect(getByPlaceholderText('비밀번호')).toBeInTheDocument();
   });
 
+  it('renders link', () => {
+    const { getByRole, getByText } = render(<LoginContainer />);
+
+    expect(getByText('계정이 없나요?')).toBeInTheDocument();
+    expect(getByRole('link', { name: '회원가입' })).toBeInTheDocument();
+    expect(getByRole('link', { name: '회원가입' })).toHaveAttribute('href', '/signup');
+  });
   it('input id and password', () => {
     const { getByPlaceholderText } = render(<LoginContainer />);
 
