@@ -1,10 +1,10 @@
 import React from 'react';
 import { Input, Form } from 'antd';
 
-export default function Login({ formik: { values, handleChange } }) {
+export default function Login({ formik: { values, handleChange, handleSubmit } }) {
   return (
     <>
-      <Form className="login-form">
+      <Form className="login-form" onSubmit={handleSubmit}>
         <Input
           className="form-input-wrapper"
           placeholder="아이디"
@@ -25,6 +25,7 @@ export default function Login({ formik: { values, handleChange } }) {
           value={values.password}
           required
         />
+        <button type="submit" onClick={handleSubmit}>로그인</button>
       </Form>
       <div className="go-to-signup-wrapper">
         <p>계정이 없나요? </p>
