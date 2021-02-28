@@ -6,6 +6,7 @@ import LoginContainer from '@pages/login';
 
 describe('Login', () => {
   const handleChange = jest.fn();
+  const handleSubmit = jest.fn();
   beforeEach(() => {
     jest.clearAllMocks();
     useFormik.mockImplementationOnce(() => ({
@@ -14,6 +15,7 @@ describe('Login', () => {
         password: '',
       },
       handleChange,
+      handleSubmit,
     }));
   });
   it('renders id,password,name,email,phone form', () => {
@@ -42,5 +44,13 @@ describe('Login', () => {
       target: { value: '1234' },
     });
     expect(handleChange).toHaveBeenCalledTimes(2);
+  });
+
+  it('submits id and password ', () => {
+    const { getByText } = render(<LoginContainer />);
+
+    fireEvent.click(getByText('로그인'));
+
+    expect(handleSubmit).toHaveBeenCalled();
   });
 });
