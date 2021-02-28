@@ -1,8 +1,7 @@
 import React from 'react';
 import { Button, Input, Form } from 'antd';
 
-export default function SignUp({ formik:{values,handleSubmit,handleChange} }) {
-
+export default function SignUp({ formik: { values, handleSubmit, handleChange } }) {
   return (
     <>
       <Form className="signup-form" onSubmit={handleSubmit}>
@@ -73,10 +72,6 @@ export default function SignUp({ formik:{values,handleSubmit,handleChange} }) {
         </Button>
       </Form>
 
-      <div className="go-to-login-wrapper">
-        <p>이미 회원이세요? </p>
-        <a href="/login">로그인</a>
-      </div>
     </>
   );
 }
