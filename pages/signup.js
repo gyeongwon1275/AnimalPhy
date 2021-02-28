@@ -13,8 +13,8 @@ export default function SignUpContainer() {
       email: '',
       phone: '',
     },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: () => {
+
     },
   });
 
