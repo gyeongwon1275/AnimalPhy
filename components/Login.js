@@ -10,7 +10,7 @@ export default function Login({ formik: { values, handleChange } }) {
         id="userId"
         name="userId"
         type="text"
-        onChange={handleChange}
+        onChange={() => {}}
         value={values.userId}
         required
       />
@@ -20,7 +20,7 @@ export default function Login({ formik: { values, handleChange } }) {
         id="password"
         name="password"
         type="password"
-        onChange={handleChange}
+        onChange={() => {}}
         value={values.password}
         required
       />
