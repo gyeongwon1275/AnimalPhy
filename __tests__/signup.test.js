@@ -41,7 +41,7 @@ describe('SignUp', () => {
     expect(getByRole('link', { name: '로그인' })).toBeInTheDocument();
   });
 
-  it('input id,password,name,email,phone form', () => {
+  it('inputs id,password,name,email,phone form', () => {
     const { getByPlaceholderText } = render(<SignUpContainer />);
 
     fireEvent.change(getByPlaceholderText('아이디'), {
@@ -75,7 +75,7 @@ describe('SignUp', () => {
     expect(handleChange).toHaveBeenCalledTimes(6);
   });
 
-  it('submit user info', () => {
+  it('submits user info', () => {
     const { getByText } = render(<SignUpContainer />);
 
     fireEvent.click(getByText('회원가입'));
